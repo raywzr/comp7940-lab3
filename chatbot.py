@@ -24,6 +24,11 @@ def main():
     # here we register an echo dispatcher
     echo_handler = MessageHandler(Filters.text & (~Filters.command), echo)
     dispatcher.add_handler(echo_handler)
+
+    # on different commands - answer in Telegram
+    dispatcher.add_handler(CommandHandler("add", add))
+    dispatcher.add_handler(CommandHandler("help", help_command))
+
     # To start the bot:
     updater.start_polling()
     updater.idle()
