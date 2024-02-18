@@ -5,7 +5,7 @@ class HKBU_ChatGPT():
         if type(config_path) == str:
             self.config = configparser.ConfigParser()
             self.config.read(config_path)
-        elif type(self.config) == configparser.ConfigParser:
+        elif type(config_path) == configparser.ConfigParser:
             self.config = config_path
     def submit(self,message):
         conversation = [{"role": "user", "content": message}]
