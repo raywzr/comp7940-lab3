@@ -39,7 +39,6 @@ def main():
     dispatcher.add_handler(CommandHandler("add", add))
     dispatcher.add_handler(CommandHandler("help", help_command))
     dispatcher.add_handler(CommandHandler("hello", hello))
-    dispatcher.add_handler(CommandHandler("bye", bye))
     # To start the bot:
     updater.start_polling()
     updater.idle()
